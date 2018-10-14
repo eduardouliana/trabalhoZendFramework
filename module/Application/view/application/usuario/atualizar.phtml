@@ -1,0 +1,10 @@
+<?php
+$form->prepare();
+$form->setAttribute('action', '');
+
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+echo 'E-mail: ' . $this->formRow($form->get('email')) . '<br>';
+echo 'Senha: ' . $this->formRow($form->get('senha')) . '<br>';
+echo $this->formSubmit($form->get('submit')) . '<br>';
+echo $this->form()->closeTag();
